@@ -2,7 +2,8 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Amy Cooper</h1>
+    <h1>Amy Cooper Enterprise Computing classs</h1>
+    
   );
 }
 
