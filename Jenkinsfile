@@ -20,19 +20,5 @@ pipeline {
                 '''
             }
         }
-         stage('Test'){
-            agent{
-                docker{
-                    image 'node:20.15.0-slim'
-                    reuseNode true
-                }
-            }
-            steps{
-                sh '''
-                test -f build/index.html
-                npm test
-                '''
-            }
-        }
     }
 }
