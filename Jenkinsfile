@@ -1,9 +1,13 @@
 pipeline {
     agent any
+     triggers {
+        cron('H/1 * * * *') 
+    }
     environment{
         NETLIFY_SITE_ID = 'be44a665-6d40-463a-b63b-e178be46ff68'
         NETLIFY_AUTH_TOKEN = credentials('Assignment2Token')
     }
+
     stages {
         stage('Build') {
             agent{
